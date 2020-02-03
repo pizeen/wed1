@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">    
+<title>This is a JavaScript example</title>
+  </head> 
+
+<body>   
+<button onclick="myF(this)"> สุ่ม </button>    
+<p>สึ่มเลข0-10</p>
+<p id="rand1"> </p>
+<p id="rand2"> </p>
+<p id="s1"></p>
+<p id="s2"></p>
+<p id="s3"></p>
+<h2 id="rand3"> </h2>
+<script>
+var x=0;
+var y=0;
+var z=0;
+function myF(id){
+//id.innerHTML = x;    
+ x=Math.floor(Math.random()*9)+1; 
+ y=Math.floor(Math.random()*9)+1;    
+ z=Math.floor(Math.random()*9)+1;
+
+document.getElementById("rand1").innerHTML=
+"<table border='1' bordercolor=blue <tr><td><h2>"+x+"</h2></td><td><h2>"+y+"</h2></td><td><h2>"+z+"</h2></td></tr>> </table>";
+//document.getElementById("s1").innerHTML = "<OBJECT DATA='SoundNumber/"+x+".wav' TYPE='audio/wav' TITLE='description' WIDTH=0 HEIGHT=0>";
+//document.getElementById("s2").innerHTML = "<OBJECT DATA='SoundNumber/"+y+".wav' TYPE='audio/wav' TITLE='description' WIDTH=0 HEIGHT=0>";
+//document.getElementById("s3").innerHTML = "<OBJECT DATA='SoundNumber/"+z+".wav' TYPE='audio/wav' TITLE='description' WIDTH=0 HEIGHT=0>";
+
+setTimeout("myF1(this);",1000);
+}
+function myF1(id){
+    document.getElementById("s1").innerHTML = "<OBJECT DATA='SoundNumber/"+x+".wav' TYPE='audio/wav' TITLE='description' WIDTH=0 HEIGHT=0>";
+setTimeout("myF2(this);",1000);
+}function myF2(id){
+    document.getElementById("s2").innerHTML = "<OBJECT DATA='SoundNumber/"+y+".wav' TYPE='audio/wav' TITLE='description' WIDTH=0 HEIGHT=0>";
+setTimeout("myF3(this);",1000);
+}function myF3(id){
+    document.getElementById("s3").innerHTML = "<OBJECT DATA='SoundNumber/"+z+".wav' TYPE='audio/wav' TITLE='description' WIDTH=0 HEIGHT=0>";
+
+}
+
+
+
+/*if(x+y+z<11){
+    sum="Low";
+}else if (x+y+z==11)
+{
+    sum="HI_LO";
+}else{
+    sum="HI";
+}*/
+//document.write(sum);
+//document.getElementById("rand2").innerHTML=sum;
+
+</script>
+</body>
+</html>

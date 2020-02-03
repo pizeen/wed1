@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">    
+<title>This is a JavaScript example</title>
+  </head> 
+
+<body> 
+<button onclick="document.getElementById('rand1').innerHTML =  Math.floor(Math.random()*10)">  
+the time is! </button>      
+<p>สึ่มเลข0-10</p>
+<p id="rand1"> </p>
+<p id="rand2"> </p>
+<h2 id="rand3"> </h2>
+<script>
+var x=Math.floor(Math.random()*6)+1; 
+var y=Math.floor(Math.random()*6)+1;    
+var z=Math.floor(Math.random()*6)+1;      
+document.getElementById("rand1").innerHTML=
+"<table border='1' bordercolor=blue <tr><td><h2>"+x+"</h2></td><td><h2>"+y+"</h2></td><td><h2>"+z+"</h2></td></tr>> </table>";
+if(x+y+z<11){
+    sum="Low";
+}else if (x+y+z==11)
+{
+    sum="HI_LO";
+}else{
+    sum="HI";
+}
+//document.write(sum);
+document.getElementById("rand2").innerHTML=sum;
+
+</script>
+</body>
+</html>

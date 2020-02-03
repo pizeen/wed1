@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    
+    </head>
+    <body>
+        <p id="s1"></p>
+    <h3 onclick="myF1(this)">คลิกเมาส์ myF1</h3>
+    <h3 onclick="setTimeout(myF2(this),100000)">คลิกเมาส์ myF2</h3>
+    <script>
+    
+    var x= 0; //var x= "Global"
+    var au;
+    function myF1(id){
+        var x= 0; //var x="Local";
+        id.innerHTML = x++;   
+    }
+    function myF2(id){
+        id.innerHTML = x;
+        document.getElementById("s1").innerHTML = "<OBJECT DATA='SoundNumber/"+x+".wav' TYPE='audio/wav' TITLE='description' WIDTH=0 HEIGHT=0>";
+       // document.getElementById("s1").innerHTML = "<OBJECT DATA='animalsNumber/"+x+".jpg' TYPE='image/jpg' TITLE='description' WIDTH=50 HEIGHT=50>";
+        if(x<9){
+            x++;
+        } else{
+            x=0;
+        }
+        
+    }
+    </script>
+    </body>
+</html>
